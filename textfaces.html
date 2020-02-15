@@ -6,11 +6,19 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <script src="assets\js\main.js"></script>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <script>
+            texts = ['Step right up getcha text faces here!', 'pls no copy pasterino', 'You came to the right dongerhood.', 'All the faces, but not in your face.', 'do you like this website?', '( ͡° ͜ʖ ͡°)', 'Not made in the Bay area.', 'Suggestions welcome.', 'Better than googling "how to make lenny face".', '"omg how did you make that face?"', 'Because Googling for these things is hard.', 'Because you\'re worth it.', 'Mo\' faces, mo\' value.', 'Unicooooode.', 'Your fonts are probably broken.', '☑Nice meme.', '┬┴┬┴┤(･_├┬┴┬┴', '[̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅] Do you have change for a donger bill?', 'Putting the ( ͡° ͜ʖ ͡°) in "comedy".', 'ayy lmao', 'Thanks for reading all these messages.', 'Refresh for another message!', '"I am an hacker"', '"can you hack google?"', 'hey I have this milion dollars idea...', 'who actually reads there messages??', '"omg, can you hack my bf fortinte account?"', 'Share this website with your friends!', 'HTML ISN\'T A PROGRAMMING LANGUAGE', 'lalalalalala lalalalalala', 'thank you w3schools i love you', 'ayyyyyyyyyyyyyyyyyy', 'fun fun fun fun fun... ThIs IsN\'T a FuN WeBsItE', 'happy bored day!', 'hey! don\'t browse this at school!', 'is this actually random?', 'yes, it is' ];
+            function loadText()
+            {
+                document.getElementById('randomText').value = texts[Math.floor(Math.random()*texts.length)]
+            }
+        </script>
     </head>
-    <body>
+    <body onload="loadText()">
         <banner class="banner">
             <h1>Fun Text ( ͡° ͜ʖ ͡°)</h1>
             <h2>The fun website</h2>
+            <input readonly type="text" id="randomText">
         </banner>
         <div class="faces">
             <button class="facedetails"><span class="face" onclick="select_all_and_copy(this)">( ͡° ͜ʖ ͡°)</span>

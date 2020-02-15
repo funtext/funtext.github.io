@@ -5,6 +5,15 @@ body
     text-align: center;
     background-color: rgb(60, 60, 60);
 }
+input
+{
+    border:none;
+    text-align: center;
+    color:white;
+    background-color: rgb(60, 60, 60);
+    display: inline-block;
+    width: 100%;
+}
 .banner
 {
     display: block;
