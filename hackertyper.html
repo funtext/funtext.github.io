@@ -11,26 +11,93 @@
         gtag('config', 'UA-158589297-1');
         </script>
         <title>Fun Text ( ͡° ͜ʖ ͡°) - Hacker Typer</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
         <script src="assets\js\main.js"></script>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <script>
-            texts = ['Step right up getcha text faces here!', 'pls no copy pasterino', 'You came to the right dongerhood.', 'All the faces, but not in your face.', 'do you like this website?', '( ͡° ͜ʖ ͡°)', 'Not made in the Bay area.', 'Suggestions welcome.', 'Better than googling "how to make lenny face".', '"omg how did you make that face?"', 'Because Googling for these things is hard.', 'Because you\'re worth it.', 'Mo\' faces, mo\' value.', 'Unicooooode.', 'Your fonts are probably broken.', '☑Nice meme.', '┬┴┬┴┤(･_├┬┴┬┴', '[̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅] Do you have change for a donger bill?', 'Putting the ( ͡° ͜ʖ ͡°) in "comedy".', 'ayy lmao', 'Thanks for reading all these messages.', 'Refresh for another message!', '"I am an hacker"', '"can you hack google?"', 'hey I have this milion dollars idea...', 'who actually reads there messages??', '"omg, can you hack my bf fortinte account?"', 'Share this website with your friends!', 'HTML ISN\'T A PROGRAMMING LANGUAGE', 'lalalalalala lalalalalala', 'thank you w3schools i love you', 'ayyyyyyyyyyyyyyyyyy', 'fun fun fun fun fun... ThIs IsN\'T a FuN WeBsItE', 'happy bored day!', 'hey! don\'t browse this at school!', 'is this actually random?', 'yes, it is', '"gifs" or "jifs"? (IT IS GIF!!!)', 'gif or not?', 'giphy = 🖤', '"the gifinator"', 'no, you cannot use my giphy API code!', '"who eat my spaghetti?!?!?!', '"splish splash your opinion is trash" - Duck', 'What if I told you that I use Internet Explorer... (I AM KIDDING)'];
-            function loadText()
-            {
-                document.getElementById('randomText').value = texts[Math.floor(Math.random()*texts.length)]
-            }
+                $(function(){
+                $("#screen").css({
+                    "width" : document.documentElement.clientWidth,
+                    "minHeight" : document.documentElement.clientHeight
+                });
+                $(document).click(function(){
+                    $("#type").trigger("focus");
+                });
+                $(document).keyup(function(){
+                    $("#type").trigger("focus");
+                });
+                var terms = [
+                    "$(function(){\n\t$.database.get('Password')\n});",
+                    "exec({\n\t'Password' : 'KbJ7zpQ',\n\t'Username' : 'Administrator'\n});",
+                    ">>> Command Returned 2",
+                    ">>> Return 0;",
+                    "## Server Connected",
+                    "## Server Disconnected",
+                    "## Connection Refused",
+                    "ACCESS DENIED",
+                    "ACCESS GRANTED",
+                    "Password: ********\n>>> Incorrect Password\n## Server Disconnected",
+                    "\n\nNMAP\n\n\tIP: 198.162.0.24\n\tPlatform: Linux armv7\n\tUsers Connected: 27\n\tNetmask: 255.255.255.0\n\t0 flags up\n\n\t",
+                    "Reconnecting...",
+                    "https://code.sololearn.com/W3DFMTUZmrnp/",
+                    "/bin ~ # sudo chown /system/",
+                    "$.system.on();\n\t[SYSTEM]:Antivirus Protocol Overridden\n\t[SERVER]:Firewall Disabled\n\t",
+                    "[ROOT]:Filesystem Formatted",
+                    "oauth: ks7bJpp8bvxz35hq",
+                    "TOR NETWORK ENABLED",
+                    "DARK WEB CONNECTED",
+                    "### marcoceccon.ga"
+                ];
+                
+                $("#type").keyup(function(e){
+                    var random = (Math.floor(Math.random() * terms.length));
+                    breakSpace = new RegExp("\n", "g");
+                    tabSpace = new RegExp("\t", "g");
+                    try{
+                    terms[random] = terms[random].replace(breakSpace, "<br />");
+                    terms[random] = terms[random].replace(tabSpace, "&nbsp;&nbsp;&nbsp;&nbsp;");
+                    }
+                    catch(err){}
+                    $("body").prepend(terms[random] + "<br />");
+                    
+                });
+                $("#type").trigger("focus")
+            });
         </script>
+        <style>
+            body, html {
+                margin: 0;
+                overflow: auto;
+                overflow-y: auto;
+                overflow-x: hidden;
+                word-wrap: normal;
+                background-color: #111;
+                color: #393;
+                font-family: monospace;
+            }
+            #type {
+                width: 100vw; 
+                height: 1px;
+                border: none;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 2;
+                overflow: auto;
+                color: transparent;
+                outline: none;
+                background-color: transparent;
+            }
+        </style>
     </head>
     <body onload="loadText()">
-        <banner class="banner">
-            <h1>Fun Text ( ͡° ͜ʖ ͡°)</h1>
-            <h2>The fun website</h2>
-            <input style="display: inline-block; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none; text-align: center;" readonly type="text" id="randomText">
-        </banner>
-        <img src="https://lh3.googleusercontent.com/proxy/I5Z7oWfMqGTsFD2T6Y5iEgvtTx7t7ixsJhZfHcKVjjFgFLr56eR2xgEPolufH6VIpuSlaG4PUBtUcFQY0asodF73ESxcPFg">
-        <p>Work in progres...</p>
-        <p class="end">Fun Text ( ͡° ͜ʖ ͡°) - Marco Ceccon</p>
+        <h1>Fun Text ( ͡° ͜ʖ ͡°)</h1>
+        <h2>The fun website</h2>
+        Just Start Typing! [Tap to toggle Keyboard on Mobile Devices]
+        <input type="text" id="type" />
     </body>
 </html>
