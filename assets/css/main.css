@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Aleo:300&display=swap');
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 body
 {
     font-family: 'Aleo';
