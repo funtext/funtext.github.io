@@ -12,6 +12,11 @@ body
     background-color: rgb(60, 60, 60);
     color: white;
 }
+.rndGifMeme
+{
+    width: 65%;
+    height: auto;
+}
 .banner
 {
     display: block;
