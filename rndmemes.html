@@ -26,10 +26,7 @@
                     data = JSON.parse(request.responseText).url;
                     data0 = JSON.parse(request.responseText).postLink;
                     data1 = JSON.parse(request.responseText).title;
-                    if(data1 != "meirl")
-                    {
-                        document.getElementById("text").innerHTML = '<p>' + data1 + '</p>';
-                    }
+                    document.getElementById("text").innerHTML = '<p>' + data1 + '</p>';
                     document.getElementById("meme").innerHTML = '<a href="' + data0 + '"><center><img class="rndGifMeme" src = "'+data+'"  title="Meme via Reddit"></center></a>';
                 } 
                 else 
