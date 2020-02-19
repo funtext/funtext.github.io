@@ -1,4 +1,4 @@
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Funtext/funtext.github.io)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Funtext/funtext.github.io) ![Website](https://img.shields.io/website?down_color=red&down_message=Offline&up_color=green&up_message=Online&url=https%3A%2F%2Ffuntext.github.io)
 # Fun Text ( ͡° ͜ʖ ͡°)
 The fun website ( ͡° ͜ʖ ͡°)
 ## What is this website?
