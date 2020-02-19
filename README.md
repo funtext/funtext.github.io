@@ -1,3 +1,4 @@
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Funtext/funtext.github.io)
 # Fun Text ( ͡° ͜ʖ ͡°)
 The fun website ( ͡° ͜ʖ ͡°)
 ## What is this website?
