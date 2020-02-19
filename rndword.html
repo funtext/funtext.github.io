@@ -19,15 +19,13 @@
         }
             document.addEventListener('DOMContentLoaded', function () {
             request = new XMLHttpRequest;
-            request.open('GET', 'https://rndmemes.herokuapp.com/', true);
+            request.open('GET', 'https://rndword.herokuapp.com/word', true);
             request.onload = function() {
                 if (request.status >= 200 && request.status < 400)
                 {
-                    data = JSON.parse(request.responseText).url;
-                    data0 = JSON.parse(request.responseText).postLink;
-                    data1 = JSON.parse(request.responseText).title;
-                    document.getElementById("text").innerHTML = '<p>' + data1 + '</p>';
-                    document.getElementById("meme").innerHTML = '<a href="' + data0 + '"><center><img class="rndGifMeme" src = "'+data+'"  title="Meme via Reddit"></center></a>';
+                    data = request.responseText.replace("[\"", "");
+                    data = data.replace("\"]", "");
+                    document.getElementById("text").innerHTML = '<p>' + data + '</p>';
                 } 
                 else 
                 {
@@ -57,7 +55,7 @@
     <span style="text-align: center;" id="text"></span>
     <span style="padding: 10px; margin-top: 10px; width: 50%;" id="meme"></span>
     <div>
-        <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random meme!</button>
+        <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random word!</button>
     </div>
     <script>
         function refreshPage(){
