@@ -19,13 +19,12 @@
         }
             document.addEventListener('DOMContentLoaded', function () {
             request = new XMLHttpRequest;
-            request.open('GET', 'https://rndword.herokuapp.com/', true);
+            request.open('GET', 'https://rndyoutubevid.herokuapp.com/', true);
             request.onload = function() {
                 if (request.status >= 200 && request.status < 400)
                 {
-                    data = request.responseText.replace("[\"", "");
-                    data = data.replace("\"]", "");
-                    document.getElementById("text").innerHTML = '<p>' + data + '</p>';
+                    data = request.responseText;
+                    document.getElementById("video").innerHTML = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/" + data + "\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
                 } 
                 else 
                 {
@@ -38,7 +37,7 @@
             request.send();
             });
     </script>
-    <title>Fun Text ( ͡° ͜ʖ ͡°) - Random Memes</title>
+    <title>Fun Text ( ͡° ͜ʖ ͡°) - Random YouTube videos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="assets/css/main.css" />
     <script src="assets\js\main.js"></script>
@@ -52,9 +51,11 @@
         <h2>The fun website</h2>
         <input style="display: inline-block; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none; text-align: center;" readonly type="text" id="randomText">
     </banner>
-    <span style="text-align: center;" id="text"></span>
+    <div class="iframe-container">
+        <span style="text-align: center;" id="video"></span>
+    </div>
     <div>
-        <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random word!</button>
+        <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random YouTube video!</button>
     </div>
     <script>
         function refreshPage(){
