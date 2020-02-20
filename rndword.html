@@ -19,7 +19,7 @@
         }
             document.addEventListener('DOMContentLoaded', function () {
             request = new XMLHttpRequest;
-            request.open('GET', 'https://rndword.herokuapp.com/word', true);
+            request.open('GET', 'https://rndword.herokuapp.com/', true);
             request.onload = function() {
                 if (request.status >= 200 && request.status < 400)
                 {
