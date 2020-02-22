@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158589297-1');
+        </script>
+        <title>Fun Text ( ͡° ͜ʖ ͡°) - Mystery Login</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <script src="assets\js\main.js"></script>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <script>
+            function gotoRandom(){
+                var msLog = ["1"];
+                window.location.href = "mysteryLog/" + msLog[Math.floor(Math.random()*msLog.length)] + ".html";
+            }
+        </script>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Aleo:300&display=swap');
+            input:focus,
+            select:focus,
+            textarea:focus,
+            button:focus {
+                outline: none;
+            }
+            body, html {
+                margin: 0;
+                overflow: auto;
+                overflow-y: auto;
+                overflow-x: hidden;
+                word-wrap: normal;
+                background-color: #111;
+                color: #393;
+                font-family: 'Aleo', monospace;
+            }
+            button {
+                background-color: #111;
+                padding: 10px;
+                color: #393;
+                font-family: 'Aleo', monospace;
+                border-color: #393;
+                margin: 20px auto;
+                display: block;
+                top: 50%;
+                text-align: center;
+            }
+            #type {
+                width: 100vw; 
+                height: 1px;
+                border: none;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 2;
+                overflow: auto;
+                color: transparent;
+                outline: none;
+                background-color: transparent;
+            }
+            .centered{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body class="centered">
+        <h1>Fun Text ( ͡° ͜ʖ ͡°)</h1>
+        <h2>The fun website</h2>
+        <strong>How do I play this?</strong><br>You will get some hints, and you will have to discover the username and password. Not every hint needs at something! To start playing press the button below!<br>
+        <button onclick="gotoRandom()">Start playing!</button>
+        <i>For now there is just a mystery login, but i will add more, don't worry</i>
+    </body>
+</html>

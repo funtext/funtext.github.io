@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158589297-1');
+        </script>
+        <title>Fun Text ( ͡° ͜ʖ ͡°) - Mystery Login</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <script>
+            function alertConsole() {
+                console.error("HEY! GO AWAY FROM HERE YOU DISGUSTING CHEATER! Just kidding, i don't really care...")
+            }
+            function viewPassword() {
+                var passwordInput = document.getElementById('password');
+                var passStatus = document.getElementById('pass-status');
+                
+                if (passwordInput.type == 'password'){
+                    passwordInput.type='text';
+                    passStatus.className='fa fa-eye-slash';
+                    
+                }
+                else{
+                    passwordInput.type='password';
+                    passStatus.className='fa fa-eye';
+                }
+            }
+            function lookPassw() {
+                var passwordI = document.getElementById('password').value;
+                var usernameI = document.getElementById('username').value;
+                if(passwordI = "supermariobrothers88"){
+                    if(usernameI = "Mike88"){
+                        var div = document.getElementById('acc1');
+                        div.classList.toggle('visible');
+                        var div1 = document.getElementById('hide');
+                        div1.classList.toggle('visible');
+                    }
+                }
+            }
+            function goback() {
+                window.history.back();
+            }
+        </script>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Aleo:300&display=swap');
+            input:focus,
+            select:focus,
+            textarea:focus,
+            button:focus {
+                outline: none;
+            }
+            .centered{
+                text-align: center;
+            }
+            body, html {
+                margin: 0;
+                overflow: auto;
+                overflow-y: auto;
+                overflow-x: hidden;
+                word-wrap: normal;
+                background-color: #111;
+                color: #393;
+                font-family: 'Aleo', monospace;
+            }
+            button {
+                background-color: #111;
+                padding: 10px;
+                color: #393;
+                font-family: 'Aleo', monospace;
+                border-color: #393;
+                margin: 20px auto;
+                display: block;
+                top: 50%;
+                text-align: center;
+            }
+            input {
+                background-color: #111;
+                padding: 10px;
+                color: #393;
+                font-family: 'Aleo', monospace;
+                border-color: #393;
+                margin: 20px auto;
+                display: block;
+                top: 50%;
+                text-align: center;
+            }
+            #type {
+                width: 100vw; 
+                height: 1px;
+                border: none;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 2;
+                overflow: auto;
+                color: transparent;
+                outline: none;
+                background-color: transparent;
+            }
+            .blinking{
+                animation:blinkingText 1.3s infinite;
+                font-size: x-large;
+            }
+            @keyframes blinkingText{
+                0%{		color: #393;	}
+                49%{	color: transparent;	}
+                50%{	color: transparent;	}
+                51%{	color:transparent;	}
+                100%{	color: #393;	}
+            }
+            #acc1 {
+                display: none;
+            }
+            #acc1.visible {
+                display: block;
+            }
+            #hide {
+                display: block;
+            }
+            #hide.visible {
+                display: none;
+            }
+        </style>
+    </head>
+    <body class="centered" onload="alertConsole()">
+        <h1>Fun Text ( ͡° ͜ʖ ͡°)</h1>
+        <h2>The fun website</h2>
+        <strong>Mike Smith</strong>, was born in <strong>1988</strong>.<br><br> He <strong>loves</strong>:<br>
+        - Pizza<br>
+        - Super Mario Brothers<br>
+        - Using his computer to watch Jacksfilms<br><br>
+        He <strong>hates</strong>:<br>
+        - Instagram<br>
+        - Sonic the Hedgehog<br>
+        - Ravioli<br><br>
+        <strong>Hints</strong>:<br>
+        - Username contains name and first letter is uppercase<br>
+        - Password is all lowercase and contains the year that he was born<br><br><br>
+            <div id="hide">
+                Username:<br><input type="text" id="username">
+                Password:<br><input type="password" id="password"><i id="pass-status" class="fa fa-eye" aria-hidden="true" onclick="viewPassword()"></i>
+                <button onclick="lookPassw()">Login</button>
+            </div>
+            <div id="acc1" style="margin-top: 30px;"><div class="blinking"><strong>ACCESS GRANTED</strong></div><button onclick="goback()">Go back</button></div>
+    </body>
+</html>
