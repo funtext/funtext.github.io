@@ -50,6 +50,40 @@
             .centered{
                 text-align: center;
             }
+            .blinking{
+                animation:blinkingText 1.3s infinite;
+                font-size: x-large;
+            }
+            @keyframes blinkingText{
+                0%{		color: #393;	}
+                49%{	color: transparent;	}
+                50%{	color: transparent;	}
+                51%{	color:transparent;	}
+                100%{	color: #393;	}
+            }
+            #acc1 {
+                display: none;
+            }
+            #acc1.visible {
+                display: block;
+            }
+            #hide {
+                display: block;
+            }
+            #hide.visible {
+                display: none;
+            }
+            input {
+                background-color: #111;
+                padding: 10px;
+                color: #393;
+                font-family: 'Aleo', monospace;
+                border-color: #393;
+                margin: 20px auto;
+                display: block;
+                top: 50%;
+                text-align: center;
+            }
         </style>
         <meta charset="UTF-8">
         <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
@@ -101,93 +135,10 @@
                 window.history.back();
             }
         </script>
-        <style>
-            @import url('https://fonts.googleapis.com/css?family=Aleo:300&display=swap');
-            input:focus,
-            select:focus,
-            textarea:focus,
-            button:focus {
-                outline: none;
-            }
-            .centered{
-                text-align: center;
-            }
-            body, html {
-                margin: 0;
-                overflow: auto;
-                overflow-y: auto;
-                overflow-x: hidden;
-                word-wrap: normal;
-                background-color: #111;
-                color: #393;
-                font-family: 'Aleo', monospace;
-            }
-            button {
-                background-color: #111;
-                padding: 10px;
-                color: #393;
-                font-family: 'Aleo', monospace;
-                border-color: #393;
-                margin: 20px auto;
-                display: block;
-                top: 50%;
-                text-align: center;
-            }
-            input {
-                background-color: #111;
-                padding: 10px;
-                color: #393;
-                font-family: 'Aleo', monospace;
-                border-color: #393;
-                margin: 20px auto;
-                display: block;
-                top: 50%;
-                text-align: center;
-            }
-            #type {
-                width: 100vw; 
-                height: 1px;
-                border: none;
-                margin: 0;
-                padding: 0;
-                display: inline-block;
-                position: fixed;
-                left: 0;
-                top: 0;
-                z-index: 2;
-                overflow: auto;
-                color: transparent;
-                outline: none;
-                background-color: transparent;
-            }
-            .blinking{
-                animation:blinkingText 1.3s infinite;
-                font-size: x-large;
-            }
-            @keyframes blinkingText{
-                0%{		color: #393;	}
-                49%{	color: transparent;	}
-                50%{	color: transparent;	}
-                51%{	color:transparent;	}
-                100%{	color: #393;	}
-            }
-            #acc1 {
-                display: none;
-            }
-            #acc1.visible {
-                display: block;
-            }
-            #hide {
-                display: block;
-            }
-            #hide.visible {
-                display: none;
-            }
-        </style>
     </head>
     <body class="centered" onload="alertConsole()">
-        <h1>Fun Text ( ͡° ͜ʖ ͡°)</h1>
-        <h2>The fun website</h2>
+        <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
+        <strong style="margin-bottom: 15px;">The fun website</strong><br><br>
         <strong>Mike Smith</strong>, was born in <strong>1988</strong>.<br><br> He <strong>loves</strong>:<br>
         - Pizza<br>
         - Super Mario Brothers<br>
