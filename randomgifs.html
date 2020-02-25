@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-158589297-1');
     </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script src="assets/js/frases.js"></script>
     <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>
-        texts = ['Step right up getcha text faces here!', 'pls no copy pasterino', 'You came to the right dongerhood.', 'All the faces, but not in your face.', 'do you like this website?', '( ͡° ͜ʖ ͡°)', 'Not made in the Bay area.', 'Suggestions welcome.', 'Better than googling "how to make lenny face".', '"omg how did you make that face?"', 'Because Googling for these things is hard.', 'Because you\'re worth it.', 'Mo\' faces, mo\' value.', 'Unicooooode.', 'Your fonts are probably broken.', '☑Nice meme.', '┬┴┬┴┤(･_├┬┴┬┴', '[̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅] Do you have change for a donger bill?', 'Putting the ( ͡° ͜ʖ ͡°) in "comedy".', 'ayy lmao', 'Thanks for reading all these messages.', 'Refresh for another message!', '"I am an hacker"', '"can you hack google?"', 'hey I have this milion dollars idea...', 'who actually reads there messages??', '"omg, can you hack my bf fortinte account?"', 'Share this website with your friends!', 'HTML ISN\'T A PROGRAMMING LANGUAGE', 'lalalalalala lalalalalala', 'thank you w3schools i love you', 'ayyyyyyyyyyyyyyyyyy', 'fun fun fun fun fun... ThIs IsN\'T a FuN WeBsItE', 'happy bored day!', 'hey! don\'t browse this at school!', 'is this actually random?', 'yes, it is', '"gifs" or "jifs"? (IT IS GIF!!!)', 'gif or not?', 'giphy = 🖤', '"the gifinator"', 'no, you cannot use my giphy API code!', '"who eat my spaghetti?!?!?!', '"splish splash your opinion is trash" - Duck', 'What if I told you that I use Internet Explorer... (I AM KIDDING)'];
-        function loadText()
-        {
-            document.getElementById('randomText').value = texts[Math.floor(Math.random()*texts.length)]
-        }
-            document.addEventListener('DOMContentLoaded', function () {
-            request = new XMLHttpRequest;
-            request.open('GET', 'https://api.giphy.com/v1/gifs/random?api_key=iMDy2jSTrxPi3WcTa1pwcHbf4BYq9HWH', true);
-            request.onload = function() {
-                if (request.status >= 200 && request.status < 400){
-                data = JSON.parse(request.responseText).data.image_url;
-                console.log(data);
-                document.getElementById("giphyme").innerHTML = '<center><img class="rndGifMeme" src = "'+data+'"  title="GIF via Giphy"></center>';
-                } else {
-                alert("An unkown error happened! (Wait a few minutes and return later)")
-                }
-            };
-            request.onerror = function() {
-                alert("An error happened connecting to Giphy servers. Try to reload the page a few times");
-            };
-            request.send();
-            });
-    </script>
-    <title>Fun Text ( ͡° ͜ʖ ͡°) - Random Gifs</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <script src="assets\js\main.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        request = new XMLHttpRequest;
+        request.open('GET', 'https://api.giphy.com/v1/gifs/random?api_key=iMDy2jSTrxPi3WcTa1pwcHbf4BYq9HWH', true);
+        request.onload = function() {
+            if (request.status >= 200 && request.status < 400){
+            data = JSON.parse(request.responseText).data.image_url;
+            console.log(data);
+            document.getElementById("giphyme").innerHTML = '<center><img class="rndGifMeme" src = "'+data+'"  title="GIF via Giphy"></center>';
+            } else {
+            alert("An unkown error happened! (Wait a few minutes and return later)")
+            }
+        };
+        request.onerror = function() {
+            alert("An error happened connecting to Giphy servers. Try to reload the page a few times");
+        };
+        request.send();
+        });
     </script>
 </head>
 <body onload="loadText()">
-    <banner class="banner">
-        <h1>Fun Text ( ͡° ͜ʖ ͡°)</h1>
-        <h2>The fun website</h2>
-        <input style="display: inline-block; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none; text-align: center;" readonly type="text" id="randomText">
-    </banner>
+    <div style="display: block; padding: 15px; color: white;">
+        <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
+        <strong style="margin-top: 5px;">The fun website</strong>
+        <input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none; text-align: center;" readonly type="text" id="randomText">
+    </div>
     <span style="padding: 10px; margin-top: 10px; width: 50%;" id="giphyme"></span>
     <img style="width:20%; margin-top: 20px; padding: 15px;" src="img\pwrgiphy.png">
     <div>

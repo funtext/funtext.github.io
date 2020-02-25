@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
+        <style>
+            body, html {
+                margin: 0;
+                overflow: auto;
+                overflow-y: auto;
+                overflow-x: hidden;
+                word-wrap: normal;
+                background-color: #111;
+                color: #393;
+                font-family: 'Aleo', monospace;
+            }
+            #type {
+                width: 100vw; 
+                height: 1px;
+                border: none;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 2;
+                overflow: auto;
+                color: transparent;
+                outline: none;
+                background-color: transparent;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-158589297-1');
         </script>
-        <title>Fun Text ( ͡° ͜ʖ ͡°) - Hacker Typer</title>
-        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
         <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-        <script src="assets\js\main.js"></script>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <script>
-                $(function(){
+            $(function(){
                 $("#screen").css({
                     "width" : document.documentElement.clientWidth,
                     "minHeight" : document.documentElement.clientHeight
@@ -65,39 +96,10 @@
                 $("#type").trigger("focus")
             });
         </script>
-        <style>
-            @import url('https://fonts.googleapis.com/css?family=Aleo:300&display=swap');
-            body, html {
-                margin: 0;
-                overflow: auto;
-                overflow-y: auto;
-                overflow-x: hidden;
-                word-wrap: normal;
-                background-color: #111;
-                color: #393;
-                font-family: 'Aleo', monospace;
-            }
-            #type {
-                width: 100vw; 
-                height: 1px;
-                border: none;
-                margin: 0;
-                padding: 0;
-                display: inline-block;
-                position: fixed;
-                left: 0;
-                top: 0;
-                z-index: 2;
-                overflow: auto;
-                color: transparent;
-                outline: none;
-                background-color: transparent;
-            }
-        </style>
     </head>
     <body>
-        <h1>Fun Text ( ͡° ͜ʖ ͡°)</h1>
-        <h2>The fun website</h2>
+        <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
+        <strong style="margin-bottom: 15px;">The fun website</strong><br><br>
         Just Start Typing! [Tap to toggle Keyboard on Mobile Devices]
         <input type="password" id="type" />
     </body>

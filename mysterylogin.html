@@ -1,28 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-158589297-1');
-        </script>
-        <title>Fun Text ( ͡° ͜ʖ ͡°) - Mystery Login</title>
-        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
-        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
-        <script src="assets\js\main.js"></script>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <script>
-            function gotoRandom(){
-                var msLog = ["1"];
-                window.location.href = "mysteryLog/" + msLog[Math.floor(Math.random()*msLog.length)] + ".html";
-            }
-        </script>
+        <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
         <style>
-            @import url('https://fonts.googleapis.com/css?family=Aleo:300&display=swap');
             input:focus,
             select:focus,
             textarea:focus,
@@ -70,10 +50,31 @@
                 text-align: center;
             }
         </style>
+        <meta charset="UTF-8">
+        <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-158589297-1');
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        
+        <script>
+            function gotoRandom(){
+                var msLog = ["1"];
+                window.location.href = "mysteryLog/" + msLog[Math.floor(Math.random()*msLog.length)] + ".html";
+            }
+        </script>
     </head>
     <body class="centered">
-        <h1>Fun Text ( ͡° ͜ʖ ͡°)</h1>
-        <h2>The fun website</h2>
+        <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
+        <strong style="margin-bottom: 15px;">The fun website</strong><br><br>
         <strong>How do I play this?</strong><br>You will get some hints, and you will have to discover the username and password. Not every hint needs at something! To start playing press the button below!<br>
         <button onclick="gotoRandom()">Start playing!</button>
         <i>For now there is just a mystery login, but i will add more, don't worry</i>
