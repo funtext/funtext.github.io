@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-158589297-1');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script src="assets/js/frases.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link href="http://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css" rel="stylesheet">
+    <script src="http://cdn.jsdelivr.net/npm/sweetalert2@9/dist/sweetalert2.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swalWithBootstrapButtons = Swal.mixin({})
+            var alerted = localStorage.getItem('alerted') || '';
+            if (alerted != 'yes') {
+                swalWithBootstrapButtons.fire({
+                    title: 'Warning!',
+                    text: "Content in this page might be inappropriate for younger people. Do you want to continue?",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes',
+                    cancelButtonText: 'No',
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.dismiss === Swal.DismissReason.cancel) {
+                        window.history.back();
+                    }
+                    else{
+                        localStorage.setItem('alerted','yes');
+                    }
+                })
+            }
+
+            request = new XMLHttpRequest;
+            request.open('GET', 'https://rndomeglechat.herokuapp.com/', true);
+            request.onload = function() {
+                if (request.status >= 200 && request.status < 400)
+                {
+                    data = request.responseText;
+                    document.getElementById("omegle").innerHTML = '<a href="' + data + '"><center><img class="rndGifMeme" src = "'+ data +'"  title="Random Omegle chat via Omegle"></center></a>';
+                } 
+                else 
+                {
+                    alert("An unkown error happened! (Wait a few minutes and return later)");
+                }
+            };
+            request.onerror = function() {
+                alert("An error happened connecting to the servers. Try to reload the page a few times");
+            };
+            request.send();
+        });
+    </script>
+</head>
+<body onload="loadText()">
+    <div style="display: block; padding: 15px; color: white;">
+        <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
+        <strong style="margin-top: 5px;">The fun website</strong>
+        <input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none; text-align: center;" readonly type="text" id="randomText">
+    </div>
+    <span style="text-align: center;" id="text"></span>
+    <span style="padding: 10px; margin-top: 10px; width: 50%;" id="omegle"></span>
+    <div>
+        <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random Omegle chat!</button>
+    </div>
+    <script>
+        function refreshPage(){
+            window.location.reload();
+        } 
+        </script>
+</body>
+</html>
