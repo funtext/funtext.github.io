@@ -3,3 +3,7 @@ function loadText()
 {
     document.getElementById('randomText').value = texts[Math.floor(Math.random()*texts.length)]
 }
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('%c Hi there! Ya know that all the code for the APIs and for the website is hosted on GitHub? No? Well, here is th elink to the organization: https://github.com/funtext', 'background: black; color: #bada55');
+    console.log('%c Feel free to leave a star too 😉', 'background: black; color: #bada55');
+});
