@@ -1,62 +1,72 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <meta charset="UTF-8">
-    <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-158589297-1');
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+<html lang="en">
+    <head>
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/cookies.css" />
+        <!-- CSS -->
 
-    <script src="assets/js/frases.js"></script>
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        request = new XMLHttpRequest;
-        request.open('GET', 'https://api1-funtext.herokuapp.com/rndword', true);
-        request.onload = function() {
-            if (request.status >= 200 && request.status < 400)
-            {
-                data = request.responseText.replace("[\"", "");
-                data = data.replace("\"]", "");
-                document.getElementById("text").innerHTML = '<p>' + data + '</p>';
-            } 
-            else 
-            {
-                alert("An unkown error happened! (Wait a few minutes and return later)");
-            }
-        };
-        request.onerror = function() {
-            alert("An error happened connecting to the servers. Try to reload the page a few times");
-        };
-        request.send();
-        });
-    </script>
-</head>
-<body onload="loadText()">
-    <div style="display: block; padding: 15px; color: white;">
-        <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
-        <strong style="margin-top: 5px;">The fun website</strong>
-        <marquee behavior="scroll" direction="right"><input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none;" readonly type="text" id="randomText"></marquee>
-    </div>
-    <span style="text-align: center;" id="text"></span>
-    <div>
-        <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random word!</button>
-    </div>
-    <script>
-        function refreshPage(){
-            window.location.reload();
-        } 
+        <!-- Other -->
+        <meta charset="UTF-8">
+        <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- Other -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-158589297-1');
         </script>
-</body>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="assets/js/cookies.js"></script>
+        <script src="assets/js/frases.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            request = new XMLHttpRequest;
+            request.open('GET', 'https://api1-funtext.herokuapp.com/rndword', true);
+            request.onload = function() {
+                if (request.status >= 200 && request.status < 400)
+                {
+                    data = request.responseText.replace("[\"", "");
+                    data = data.replace("\"]", "");
+                    document.getElementById("text").innerHTML = '<p>' + data + '</p>';
+                } 
+                else 
+                {
+                    alert("An unkown error happened! (Wait a few minutes and return later)");
+                }
+            };
+            request.onerror = function() {
+                alert("An error happened connecting to the servers. Try to reload the page a few times");
+            };
+            request.send();
+            });
+        </script>
+        <!-- JS -->
+    </head>
+    <body onload="loadText()">
+        <div style="display: block; padding: 15px; color: white;">
+            <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
+            <strong style="margin-top: 5px;">The fun website</strong>
+            <marquee behavior="scroll" direction="right"><input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none;" readonly type="text" id="randomText"></marquee>
+        </div>
+        <span style="text-align: center;" id="text"></span>
+        <div>
+            <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random word!</button>
+        </div>
+        <script>
+            function refreshPage(){
+                window.location.reload();
+            } 
+        </script>
+        <div id="cookieConsent">This website is using cookies. <a href="legal/cookies.html" target="_blank">More info</a>. <a class="cookieConsentOK">That's Fine</a></div>
+    </body>
 </html>

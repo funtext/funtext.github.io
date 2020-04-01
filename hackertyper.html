@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- CSS -->
         <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
         <style>
             body, html {
-                margin: 0;
-                overflow: auto;
-                overflow-y: auto;
-                overflow-x: hidden;
-                word-wrap: normal;
                 background-color: #111;
                 color: #393;
-                font-family: 'Aleo', monospace;
+                font-family: 'Aleo', Arial, Helvetica, sans-serif;
             }
             #type {
                 width: 100vw; 
@@ -30,10 +26,15 @@
                 background-color: transparent;
             }
         </style>
+        <link rel="stylesheet" href="assets/css/cookies.css" />
+        <!-- CSS -->
+
+        <!-- Other -->
         <meta charset="UTF-8">
         <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- Other -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
@@ -45,8 +46,9 @@
         </script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
 
-        <script src="assets/js/frases.js"></script>
-        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="assets/js/cookies.js"></script>
         <script>
             $(function(){
                 $("#screen").css({
@@ -97,11 +99,13 @@
                 $("#type").trigger("focus")
             });
         </script>
+        <!-- JS -->
     </head>
     <body>
         <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
         <strong style="margin-bottom: 15px;">The fun website</strong><br><br>
         Just Start Typing! [Tap to toggle Keyboard on Mobile Devices]
         <input type="password" id="type" />
+        <div id="cookieConsent">This website is using cookies. <a href="legal/cookies.html" target="_blank">More info</a>. <a class="cookieConsentOK">That's Fine</a></div>
     </body>
 </html>

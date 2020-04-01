@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <!-- CSS -->
         <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="../assets/css/cookies.css" />
         <style>
             input:focus,
             select:focus,
@@ -85,10 +87,14 @@
                 text-align: center;
             }
         </style>
+        <!-- CSS -->
+
+        <!-- Other -->
         <meta charset="UTF-8">
         <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
         <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- Other -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
@@ -99,9 +105,10 @@
         gtag('config', 'UA-158589297-1');
         </script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        
-        <script src="assets/js/frases.js"></script>
-        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+        <!-- JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../assets/js/cookies.js"></script>
         <script>
             function alertConsole() {
                 console.error("HEY! GO AWAY FROM HERE YOU DISGUSTING CHEATER! Just kidding, i don't really care...")
@@ -136,6 +143,7 @@
                 window.history.back();
             }
         </script>
+        <!-- JS -->
     </head>
     <body class="centered" onload="alertConsole()">
         <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
@@ -158,5 +166,6 @@
                 <button onclick="lookPassw()">Login</button>
             </div>
             <div id="acc1" style="margin-top: 30px;"><div class="blinking"><strong>ACCESS GRANTED</strong></div><button onclick="goback()">Go back</button></div>
+            <div id="cookieConsent">This website is using cookies. <a href="../legal/cookies.html" target="_blank">More info</a>. <a class="cookieConsentOK">That's Fine</a></div>
     </body>
 </html>
