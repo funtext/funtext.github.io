@@ -14,8 +14,8 @@ window.addEventListener('load', function(){
         }
     },
    content: {
-       link: "What is cookie",
-       href: "https://2gdpr.com/cookies"
+       link: "Privacy Policy",
+       href: "privacy_policy.html"
     },
     onInitialise: function(status) {
       if(status == cookieconsent.status.allow) myScripts();

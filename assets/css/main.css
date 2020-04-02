@@ -16,6 +16,15 @@ body
     width: 65%;
     height: auto;
 }
+a:link {
+    color: rgb(170, 170, 170);
+}
+a:visited {
+    color: rgb(170, 170, 170);
+}
+a:hover {
+    color: rgb(120, 120, 120);
+}
 button
 {
     color: white;
