@@ -17,25 +17,46 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="assets/js/cookies.js"></script>        
+        <script src="assets/js/cookies_index.js"></script>        
         <script src="assets/js/frases.js"></script>
+        <script type="text/javascript">
+            function ShowGuestBook()
+            {
+                var top = window.screen.height - 600;
+                top = top > 0 ? top/2 : 0;
+                        
+                var left = window.screen.width - 450;
+                left = left > 0 ? left/2 : 0;
+
+                var uploadWin = window.open('guestbook/index.html',"Guestbook","width=450,height=600" + ",top=" + top + ",left=" + left + ",resizable=no, status=no, location=no, toolbar=no, menubar=no");
+                uploadWin.moveTo(left, top);
+                uploadWin.focus();
+            }
+        </script>
         <!-- JS -->
     </head>
     <body onload="loadText()">
-        <div style="display: block; padding: 15px; color: white;">
-            <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
-            <strong style="margin-top: 5px;">The fun website</strong>
-            <marquee behavior="scroll" direction="right"><input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none;" readonly type="text" id="randomText"></marquee>
-        </div>
-        <form action="textfaces.html"><button class="button"><span>Text faces </span></button></form>       
-        <form action="hackertyper.html"><button class="button"><span>Hacker typer </span></button></form>        
-        <form action="randomgifs.html"><button class="button"><span>Random Gifs </span></button></form>
-        <form action="rndmemes.html"><button class="button"><span>Random Memes </span></button></form>
-        <form action="rndword.html"><button class="button"><span>Random Words </span></button></form>
-        <form action="rndyoutube.html"><button class="button"><span>Random YouTube videos </span></button></form>
-        <form action="mysterylogin.html"><button class="button"><span>Mystery Login </span></button></form>
-        <form action="rndomegle.html"><button class="button"><span>Random Omegle chat screenshot </span></button></form>
-        <form action="yesno.html"><button class="button"><span>Yes or No? </span></button></form>
-        <form action="8ball.html"><button class="button"><span>Ask the Magic 8 ball </span></button></form>
-    </body>
+        <div id="container">
+            <div id="header">
+                <div style="display: block; padding: 15px; color: white;">
+                    <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
+                    <strong style="margin-top: 5px;">The fun website</strong>
+                    <marquee behavior="scroll" direction="right"><input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none;" readonly type="text" id="randomText"></marquee>
+                </div>
+            </div>
+            <div id="body">
+                <button onclick="location.href='pages/textfaces.html'" class="button"><span>Text faces </span></button><br>
+                <button onclick="location.href='pages/hackertyper.html'" class="button"><span>Hacker typer </span></button><br>
+                <button onclick="location.href='pages/randomgifs.html'" class="button"><span>Random Gifs </span></button><br>
+                <button onclick="location.href='pages/rndmemes.html'" class="button"><span>Random Memes </span></button><br>
+                <button onclick="location.href='pages/rndword.html'" class="button"><span>Random Words </span></button><br>
+                <button onclick="location.href='pages/rndyoutube.html'" class="button"><span>Random YouTube videos </span></button><br>
+                <button onclick="location.href='pages/mysterylogin.html'" class="button"><span>Mystery Login </span></button><br>
+                <button onclick="location.href='pages/rndomegle.html'" class="button"><span>Random Omegle chat screenshot </span></button><br>
+                <button onclick="location.href='pages/yesno.html'" class="button"><span>Yes or No? </span></button><br>
+                <button onclick="location.href='pages/8ball.html'" class="button"><span>Ask the Magic 8 ball </span></button><br>
+            </div>
+           <div id="footer"><p><span style="float:left; padding-left: 20px;"><a href="other/other_info.html">Other info</a></span><span style="float:right; padding-right: 20px;"><a href="https://github.com/funtext">GitHub Organization</a></span></p></div>
+         </div>
+     </body>
 </html>

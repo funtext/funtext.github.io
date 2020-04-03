@@ -91,25 +91,15 @@
         <!-- Other -->
         <meta charset="UTF-8">
         <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
-        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <!-- Other -->
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158589297-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-158589297-1');
-        </script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
 
         <!-- JS -->
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="../assets/js/cookies.js"></script>
+        <script src="cookies.js"></script>
         <script>
             function alertConsole() {
                 console.error("HEY! GO AWAY FROM HERE YOU DISGUSTING CHEATER! Just kidding, i don't really care...")
@@ -131,8 +121,8 @@
             function lookPassw() {
                 var passwordI = document.getElementById('password').value;
                 var usernameI = document.getElementById('username').value;
-                if(passwordI = "passwordisincorrect"){
-                    if(usernameI = "NickBoi"){
+                if(passwordI == "supermariobrothers88"){
+                    if(usernameI == "Mike88"){
                         var div = document.getElementById('acc1');
                         div.classList.toggle('visible');
                         var div1 = document.getElementById('hide');
@@ -149,18 +139,17 @@
     <body class="centered" onload="alertConsole()">
         <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
         <strong style="margin-bottom: 15px;">The fun website</strong><br><br>
-        <strong>Nick Parry</strong>, was born in <strong>2003</strong>.<br><br> He <strong>loves</strong>:<br>
-        - Memes, mostly the "Me and the bois" and the "Password is incorrect" ones<br>
-        - Adding Boi at the and of his username<br>
-        - Watching Linus Tech Tips, mostly the videos where he drops stuff (so every video...)<br>
-        - Reddit<br><br>
+        <strong>Mike Smith</strong>, was born in <strong>1988</strong>.<br><br> He <strong>loves</strong>:<br>
+        - Pizza<br>
+        - Super Mario Brothers<br>
+        - Using his computer to watch Jacksfilms<br><br>
         He <strong>hates</strong>:<br>
-        - Instagram (duh)<br>
-        - His life<br>
-        - The fact that his password is incorrect<br><br>
+        - Instagram<br>
+        - Sonic the Hedgehog<br>
+        - Ravioli<br><br>
         <strong>Hints</strong>:<br>
-        - Username contains name and the first and fifth letter are uppercase<br>
-        - Password is all lowercase and contains the word password 2 times<br><br><br>
+        - Username contains name and first letter is uppercase<br>
+        - Password is all lowercase and contains the year that he was born<br><br><br>
             <div id="hide">
                 Username:<br><input type="text" id="username">
                 Password:<br><input type="password" id="password"><i id="pass-status" class="fa fa-eye" aria-hidden="true" onclick="viewPassword()"></i>

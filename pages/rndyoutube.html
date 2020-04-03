@@ -3,13 +3,13 @@
     <head>
         <!-- CSS -->
         <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
         <!-- CSS -->
 
         <!-- Other -->
         <meta charset="UTF-8">
         <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <!-- Other -->
 
@@ -17,26 +17,33 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="assets/js/cookies.js"></script>        
-        <script src="assets/js/frases.js"></script>
+        <script src="../assets/js/cookies.js"></script>
+        <script src="../assets/js/frases.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
             request = new XMLHttpRequest;
-            request.open('GET', 'https://api.giphy.com/v1/gifs/random?api_key=iMDy2jSTrxPi3WcTa1pwcHbf4BYq9HWH', true);
+            request.open('GET', 'https://api1-funtext.herokuapp.com/rndyoutubevid', true);
             request.onload = function() {
-                if (request.status >= 200 && request.status < 400){
-                data = JSON.parse(request.responseText).data.image_url;
-                console.log(data);
-                document.getElementById("giphyme").innerHTML = '<center><img class="rndGifMeme" src = "'+data+'"  title="GIF via Giphy"></center>';
-                } else {
-                alert("An unkown error happened! (Wait a few minutes and return later)")
+                if (request.status >= 200 && request.status < 400)
+                {
+                    data = request.responseText;
+                    document.getElementById("video").innerHTML = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/" + data + "\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+                } 
+                else 
+                {
+                    alert("An unkown error happened! (Wait a few minutes and return later)");
                 }
             };
             request.onerror = function() {
-                alert("An error happened connecting to Giphy servers. Try to reload the page a few times");
+                alert("An error happened connecting to the servers. Try to reload the page a few times");
             };
             request.send();
             });
+        </script>
+        <script>
+            function refreshPage(){
+                window.location.reload();
+            } 
         </script>
         <!-- JS -->
     </head>
@@ -46,15 +53,11 @@
             <strong style="margin-top: 5px;">The fun website</strong>
             <marquee behavior="scroll" direction="right"><input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none;" readonly type="text" id="randomText"></marquee>
         </div>
-        <span style="padding: 10px; margin-top: 10px; width: 50%;" id="giphyme"></span>
-        <img style="width:20%; margin-top: 20px; padding: 15px;" src="img\pwrgiphy.png">
-        <div>
-            <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random GIF!</button>
+        <div class="iframe-container">
+            <span style="text-align: center;" id="video"></span>
         </div>
-        <script>
-            function refreshPage(){
-                window.location.reload();
-            } 
-        </script>
+        <div>
+            <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random YouTube video!</button>
+        </div>
     </body>
 </html>

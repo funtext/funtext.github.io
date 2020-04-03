@@ -3,13 +3,13 @@
     <head>
         <!-- CSS -->
         <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="../assets/css/main.css" />
         <!-- CSS -->
 
         <!-- Other -->
         <meta charset="UTF-8">
         <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <!-- Other -->
 
@@ -17,20 +17,22 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="assets/js/cookies.js"></script>        
-        <script src="assets/js/frases.js"></script>
+        <script src="../assets/js/cookies.js"></script>
+        <script src="../assets/js/frases.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', function () {
             request = new XMLHttpRequest;
-            request.open('GET', 'https://yesno.wtf/api', true);
+            request.open('GET', 'https://api1-funtext.herokuapp.com/rndword', true);
             request.onload = function() {
-                if (request.status >= 200 && request.status < 400){
-                    data0 = JSON.parse(request.responseText).image;
-                    data1 = JSON.parse(request.responseText).answer;
-                    document.getElementById("yesno").innerHTML = '<center><strong style="margin-top: 5px; font-size: xx-large;">' + data1 + '</strong></center>';
-                    document.getElementById("yesno0").innerHTML = '<center><img class="rndGifMeme" src = "'+data0+'"  title="GIF via yesno.wtf"></center>';
-                } else {
-                    alert("An unkown error happened! (Wait a few minutes and return later)")
+                if (request.status >= 200 && request.status < 400)
+                {
+                    data = request.responseText.replace("[\"", "");
+                    data = data.replace("\"]", "");
+                    document.getElementById("text").innerHTML = '<p>' + data + '</p>';
+                } 
+                else 
+                {
+                    alert("An unkown error happened! (Wait a few minutes and return later)");
                 }
             };
             request.onerror = function() {
@@ -47,10 +49,9 @@
             <strong style="margin-top: 5px;">The fun website</strong>
             <marquee behavior="scroll" direction="right"><input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none;" readonly type="text" id="randomText"></marquee>
         </div>
-        <span style="padding: 10px; margin-top: 10px; width: 50%;" id="yesno"></span>
-        <span style="padding: 10px; margin-top: 10px; width: 50%;" id="yesno0"></span>
+        <span style="text-align: center;" id="text"></span>
         <div>
-            <button style="margin-top: 20px;" onclick="refreshPage()">Yes or No?</button>
+            <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random word!</button>
         </div>
         <script>
             function refreshPage(){

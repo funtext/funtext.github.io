@@ -11,20 +11,48 @@ body
     background-color: rgb(60, 60, 60);
     color: white;
 }
+html,body {
+    margin:0;
+    padding:0;
+    height:100%;
+ }
+ #container {
+    min-height:100%;
+    position:relative;
+ }
+ #body {
+    padding:10px;
+    padding-bottom:60px;
+ }
+ #footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:50px;
+    background:rgb(50, 50, 50);
+ }
 .rndGifMeme
 {
     width: 65%;
     height: auto;
 }
-a:link {
-    color: rgb(170, 170, 170);
+a
+{
+    color: white;
 }
-a:visited {
-    color: rgb(170, 170, 170);
-}
-a:hover {
-    color: rgb(120, 120, 120);
-}
+    a:link
+    {
+        color: white;
+    }
+    a:visited
+    {
+        color: white;
+    }
+    a:hover
+    {
+        color: rgb(200, 200, 200);
+        cursor: pointer;
+    }
 button
 {
     color: white;

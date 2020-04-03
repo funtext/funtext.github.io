@@ -15,7 +15,7 @@ window.addEventListener('load', function(){
     },
    content: {
        link: "Privacy Policy",
-       href: "privacy_policy.html"
+       href: "../other/privacy_policy.html"
     },
     onInitialise: function(status) {
       if(status == cookieconsent.status.allow) myScripts();
