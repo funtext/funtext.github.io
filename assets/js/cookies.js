@@ -15,7 +15,7 @@ window.addEventListener('load', function(){
     },
    content: {
        link: "Privacy Policy",
-       href: "../other/privacy_policy.html"
+       href: "https://funtext.ga/other/privacy_policy.html"
     },
     onInitialise: function(status) {
       if(status == cookieconsent.status.allow) myScripts();
