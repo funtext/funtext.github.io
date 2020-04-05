@@ -33,8 +33,12 @@ html,body {
  }
 .rndGifMeme
 {
-    width: 65%;
+    width: 70%;
     height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 a
 {

@@ -3,7 +3,26 @@
     <head>
         <!-- CSS -->
         <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://funtext.ga/assets/css/main.css" />
+        <link rel="stylesheet" href="https://funtext.ga/assets/css/main.css"/>
+        <style>
+            .iframe-container {
+                overflow: hidden;
+                padding-top: 56.25%;
+                position: relative;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            
+            .iframe-container iframe {
+                border: 0;
+                height: 99%;
+                left: 0;
+                right: 0;
+                position: absolute;
+                top: 0;
+                width: 99%;
+            }
+        </style>
         <!-- CSS -->
 
         <!-- Other -->
@@ -27,15 +46,17 @@
                 if (request.status >= 200 && request.status < 400)
                 {
                     data = request.responseText;
-                    document.getElementById("video").innerHTML = "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/" + data + "\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+                    document.getElementById("video").innerHTML = "<iframe src=\"https://www.youtube-nocookie.com/embed/" + data + "\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
                 } 
                 else 
                 {
+                    document.getElementById("iframecont").style = "display: none;";
+                    document.getElementById("reload").style = "display: none;";
                     alert("An unkown error happened! (Wait a few minutes and return later)");
                 }
             };
             request.onerror = function() {
-                alert("An error happened connecting to the servers. Try to reload the page a few times");
+                //alert("An error happened connecting to the servers. Try to reload the page a few times");
             };
             request.send();
             });
@@ -53,11 +74,11 @@
             <strong style="margin-top: 5px;">The fun website</strong>
             <marquee behavior="scroll" direction="right"><input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none;" readonly type="text" id="randomText"></marquee>
         </div>
-        <div class="iframe-container">
+        <div id="iframecont" class="iframe-container">
             <span style="text-align: center;" id="video"></span>
         </div>
         <div>
-            <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random YouTube video!</button>
+            <button id="reload" style="margin-top: 20px;" onclick="refreshPage()">Give me another random YouTube video!</button>
         </div>
     </body>
 </html>
