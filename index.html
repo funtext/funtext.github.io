@@ -4,6 +4,12 @@
         <!-- CSS -->
         <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://funtext.ga/assets/css/main.css" />
+        <style>
+        button
+        {
+            width: 200px;
+        }
+        </style>
         <!-- CSS -->
 
         <!-- Other -->
@@ -28,7 +34,7 @@
                 var left = window.screen.width - 450;
                 left = left > 0 ? left/2 : 0;
 
-                var uploadWin = window.open('guestbook/index.html',"Guestbook","width=450,height=600" + ",top=" + top + ",left=" + left + ",resizable=no, status=no, location=no, toolbar=no, menubar=no");
+                var uploadWin = window.open('pages/guestbook.html',"Guestbook","width=450,height=600" + ",top=" + top + ",left=" + left + ",resizable=no, status=no, location=no, toolbar=no, menubar=no");
                 uploadWin.moveTo(left, top);
                 uploadWin.focus();
             }
@@ -50,13 +56,13 @@
                 <button onclick="location.href='pages/rnd_gif.html'" class="button"><span>Random Gifs </span></button><br>
                 <button onclick="location.href='pages/rnd_memes.html'" class="button"><span>Random Memes </span></button><br>
                 <button onclick="location.href='pages/rnd_word.html'" class="button"><span>Random Words </span></button><br>
-                <button onclick="location.href='pages/rnd_youtube.html'" class="button"><span>Random YouTube videos </span></button><br>
+                <button onclick="location.href='pages/rnd_youtube.html'" class="button"><span>Random YouTube </span></button><br>
                 <button onclick="location.href='pages/mysterylogin.html'" class="button"><span>Mystery Login </span></button><br>
-                <button onclick="location.href='pages/rnd_omegle.html'" class="button"><span>Random Omegle chat screenshot </span></button><br>
+                <button onclick="location.href='pages/rnd_omegle.html'" class="button"><span>Random Omegle </span></button><br>
                 <button onclick="location.href='pages/yesno.html'" class="button"><span>Yes or No? </span></button><br>
                 <button onclick="location.href='pages/8ball.html'" class="button"><span>Ask the Magic 8 ball </span></button><br>
             </div>
-           <div id="footer"><p><span style="float:left; padding-left: 30px;"><a href="other/other_info.html">Other info</a></span><span style="float:right; padding-right: 30px;"><a href="https://github.com/funtext">GitHub Organization</a></span></p></div>
+           <div id="footer"><p><span style="float:left; padding-left: 30px;"><a href="other/whoarewe.html">Who are we?</a></span><span style="float:right; padding-right: 30px;"><a onclick="ShowGuestBook()">Guestbook</a></span></p></div>
          </div>
      </body>
 </html>
