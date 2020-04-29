@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <style>
+            input:focus,
+            select:focus,
+            textarea:focus,
+            button:focus {
+                outline: none;
+            }
+            body, html {
+                margin: 0;
+                overflow: auto;
+                overflow-y: auto;
+                overflow-x: hidden;
+                word-wrap: normal;
+                background-color: #111;
+                color: #393;
+                font-family: 'Aleo', monospace;
+            }
+            button {
+                background-color: #111;
+                padding: 10px;
+                color: #393;
+                font-family: 'Aleo', monospace;
+                border-color: #393;
+                margin: 20px auto;
+                display: block;
+                top: 50%;
+                text-align: center;
+            }
+            #type {
+                width: 100vw; 
+                height: 1px;
+                border: none;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+                position: fixed;
+                left: 0;
+                top: 0;
+                z-index: 2;
+                overflow: auto;
+                color: transparent;
+                outline: none;
+                background-color: transparent;
+            }
+            .centered{
+                text-align: center;
+            }
+            .blinking{
+                animation:blinkingText 1.3s infinite;
+                font-size: x-large;
+            }
+            @keyframes blinkingText{
+                0%{		color: #393;	}
+                49%{	color: transparent;	}
+                50%{	color: transparent;	}
+                51%{	color:transparent;	}
+                100%{	color: #393;	}
+            }
+            #acc1 {
+                display: none;
+            }
+            #acc1.visible {
+                display: block;
+            }
+            #hide {
+                display: block;
+            }
+            #hide.visible {
+                display: none;
+            }
+            input {
+                background-color: #111;
+                padding: 10px;
+                color: #393;
+                font-family: 'Aleo', monospace;
+                border-color: #393;
+                margin: 20px auto;
+                display: block;
+                top: 50%;
+                text-align: center;
+            }
+        </style>
+        <!-- CSS -->
+
+        <!-- Other -->
+        <meta charset="UTF-8">
+        <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
+        <link rel="shortcut icon" href="https://funtext.ga/favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <!-- Other -->
+
+        <!-- JS -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://funtext.ga/assets/js/cookies.js"></script>
+        <script>
+            function alertConsole() {
+                console.error("Not you again, oh jeez. Just kidding, great to have you here again!")
+            }
+            function viewPassword() {
+                var passwordInput = document.getElementById('password');
+                var passStatus = document.getElementById('pass-status');
+                
+                if (passwordInput.type == 'password'){
+                    passwordInput.type='text';
+                    passStatus.className='fa fa-eye-slash';
+                    
+                }
+                else{
+                    passwordInput.type='password';
+                    passStatus.className='fa fa-eye';
+                }
+            }
+            function lookPassw() {
+                var passwordI = document.getElementById('password').value;
+                var usernameI = document.getElementById('username').value;
+                if(passwordI == "Pickle_Rick82"){
+                    if(usernameI == "BigMacLord24"){
+                        var div = document.getElementById('acc1');
+                        div.classList.toggle('visible');
+                        var div1 = document.getElementById('hide');
+                        div1.classList.toggle('visible');
+                    }
+                }
+            }
+            function goback() {
+                window.history.back();
+            }
+        </script>
+        <!-- JS -->
+    </head>
+    <body class="centered" onload="alertConsole()">
+        <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
+        <strong style="margin-bottom: 15px;">The fun website</strong><br><br>
+        <strong>Michael Hughes</strong>, was born on <strong>24th June 1982</strong>.<br><br> He <strong>enjoys</strong>:<br>
+        - Netflix and Chill, Especially Rick and Morty because of Pickle Rick<br>
+        - Streaming on Twitch, he goes by the name MicLord<br>
+        - Eating McDonalds, his favourite is the Big Mac<br>
+        - Memes that are insulting to certain groups in society<br>
+        - Being used as an example for the funtext mystery pages webpage<br><br>
+        He <strong>hates</strong>:<br>
+        - You (Well, you are trying to steal his password)<br>
+        - People who don't follow his Twitch (Hey! That's you again, damn)<br>
+        - Light Mode<br><br>
+        <strong>Hints</strong>:<br>
+        - First letter of each word in the username is capital<br>
+        - Some people may find the password particularly offensive<br>
+        - The password is 2 words seperated by either an underscore or dash<br><br><br>
+            <div id="hide">
+                Username:<br><input type="text" id="username">
+                Password:<br><input type="password" id="password"><i id="pass-status" class="fa fa-eye" aria-hidden="true" onclick="viewPassword()"></i>
+                <button onclick="lookPassw()">Login</button>
+            </div>
+            <div id="acc1" style="margin-top: 30px;"><div class="blinking"><strong>ACCESS GRANTED</strong></div><button onclick="goback()">Go back</button></div>
+    </body>
+</html>
