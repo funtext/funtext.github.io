@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- CSS -->
-        <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://funtext.ga/assets/css/main.css" />
-        <!-- CSS -->
 
-        <!-- Other -->
-        <meta charset="UTF-8">
-        <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
-        <link rel="shortcut icon" href="https://funtext.ga/favicon.ico" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <!-- Other -->
+<head>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://funtext.ga/assets/css/main.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- CSS -->
 
-        <!-- JS -->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://funtext.ga/assets/js/cookies.js"></script>
-        <script src="https://funtext.ga/assets/js/frases.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
+    <!-- Other -->
+    <meta charset="UTF-8">
+    <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
+    <link rel="shortcut icon" href="https://funtext.ga/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Other -->
+
+    <!-- JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://funtext.ga/assets/js/cookies.js"></script>
+    <script src="https://funtext.ga/assets/js/frases.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
             request = new XMLHttpRequest;
             request.open('GET', 'https://api1-funtext.herokuapp.com/rndmemes', true);
             request.onload = function() {
-                if (request.status >= 200 && request.status < 400)
-                {
+                if (request.status >= 200 && request.status < 400) {
                     data = JSON.parse(request.responseText).url;
                     data0 = JSON.parse(request.responseText).postLink;
                     data1 = JSON.parse(request.responseText).title;
                     document.getElementById("text").innerHTML = '<p style=\"margin-bottom: 0px;\">' + data1 + '</p>';
-                    document.getElementById("meme").innerHTML = '<a href="' + data0 + '"><center><img class="rndGifMeme" src = "'+data+'"  title="Meme via Reddit"></center></a>';
-                } 
-                else 
-                {
+                    document.getElementById("meme").innerHTML = '<a href="' + data0 + '"><center><img class="rndGifMeme" src = "' + data + '"  title="Meme via Reddit"></center></a>';
+                } else {
                     alert("An unkown error happened! (Wait a few minutes and return later)");
                 }
             };
@@ -41,25 +40,33 @@
                 alert("An error happened connecting to the servers. Try to reload the page a few times");
             };
             request.send();
-            });
-        </script>
-        <!-- JS -->
-    </head>
-    <body onload="loadText()">
-        <div style="display: block; padding: 15px; color: white;">
-            <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
-            <strong style="margin-top: 5px;">The fun website</strong>
-            <marquee behavior="scroll" direction="right"><input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none;" readonly type="text" id="randomText"></marquee>
-        </div>
-        <span style="text-align: center;" id="text"></span>
-        <span style="padding: 10px; margin-top: 10px; width: 50%;" id="meme"></span>
-        <div>
-            <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random meme!</button>
-        </div>
-        <script>
-            function refreshPage(){
-                window.location.reload();
-            } 
-        </script>
-    </body>
+        });
+    </script>
+    <!-- JS -->
+</head>
+
+<body onload="loadText()">
+    <div style="display: block; padding: 15px; color: white;">
+        <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
+        <strong style="margin-top: 5px;">The fun website</strong>
+        <marquee behavior="scroll" direction="right"><input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none;" readonly type="text" id="randomText"></marquee>
+    </div>
+    <span style="text-align: center;" id="text"></span>
+    <span style="padding: 10px; margin-top: 10px; width: 50%;" id="meme"></span>
+    <div>
+        <button style="margin-top: 20px;" onclick="refreshPage()">Give me another random meme!</button><br>
+        <button onclick="YT()" class="button"><span>Memes compilation <i class="fas fa-external-link-alt"></i> </span></button><br>
+
+    </div>
+    <script>
+        function YT() {
+            location.href = "https://www.youtube.com/channel/UCQU_rk4iKz1iwL3XuHSHebQ";
+        }
+
+        function refreshPage() {
+            window.location.reload();
+        }
+    </script>
+</body>
+
 </html>

@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- CSS -->
-        <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://funtext.ga/assets/css/main.css" />
-        <style>
-        button
-        {
+
+<head>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Aleo:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://funtext.ga/assets/css/main.css" />
+    <style>
+        button {
             width: 200px;
         }
-        </style>
-        <!-- CSS -->
+    </style>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-        <!-- Other -->
-        <meta charset="UTF-8">
-        <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <!-- Other -->
+    <!-- CSS -->
 
-        <!-- JS -->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://funtext.ga/assets/js/cookies.js"></script>        
-        <script src="https://funtext.ga/assets/js/frases.js"></script>
-        <script type="text/javascript">
-            function ShowGuestBook()
-            {
-                var top = window.screen.height - 600;
-                top = top > 0 ? top/2 : 0;
-                        
-                var left = window.screen.width - 450;
-                left = left > 0 ? left/2 : 0;
+    <!-- Other -->
+    <meta charset="UTF-8">
+    <title>Fun Text ( ͡° ͜ʖ ͡°)</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Other -->
 
-                var uploadWin = window.open('pages/guestbook.html',"Guestbook","width=450,height=600" + ",top=" + top + ",left=" + left + ",resizable=no, status=no, location=no, toolbar=no, menubar=no");
-                uploadWin.moveTo(left, top);
-                uploadWin.focus();
-            }
-        </script>
-        <!-- JS -->
-    </head>
-    <body onload="loadText()">
-        <div id="container">
-            <div id="header">
-                <div style="display: block; padding: 15px; color: white;">
-                    <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
-                    <strong style="margin-top: 5px;">The fun website</strong>
-                    <marquee behavior="scroll" direction="right"><input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none;" readonly type="text" id="randomText"></marquee>
-                </div>
+    <!-- JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js" data-cfasync="false"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://funtext.ga/assets/js/cookies.js"></script>
+    <script src="https://funtext.ga/assets/js/frases.js"></script>
+    <script type="text/javascript">
+        function ShowGuestBook() {
+            var top = window.screen.height - 600;
+            top = top > 0 ? top / 2 : 0;
+
+            var left = window.screen.width - 450;
+            left = left > 0 ? left / 2 : 0;
+
+            var uploadWin = window.open('pages/guestbook.html', "Guestbook", "width=450,height=600" + ",top=" + top + ",left=" + left + ",resizable=no, status=no, location=no, toolbar=no, menubar=no");
+            uploadWin.moveTo(left, top);
+            uploadWin.focus();
+        }
+
+        function YT() {
+            location.href = "https://www.youtube.com/channel/UCQU_rk4iKz1iwL3XuHSHebQ";
+        }
+    </script>
+    <!-- JS -->
+</head>
+
+<body onload="loadText()">
+    <div id="container">
+        <div id="header">
+            <div style="display: block; padding: 15px; color: white;">
+                <h1 style="margin-bottom: 5px;">Fun Text ( ͡° ͜ʖ ͡°)</h1>
+                <strong style="margin-top: 5px;">The fun website</strong>
+                <marquee behavior="scroll" direction="right"><input style="display: inline-block; margin-top: 15px; margin-bottom: 15px; width: 100%; background-color: rgb(60, 60, 60); color: white; border:none;" readonly type="text" id="randomText"></marquee>
             </div>
-            <div id="body">
-                <button onclick="location.href='pages/textfaces.html'" class="button"><span>Text faces </span></button><br>
-                <button onclick="location.href='pages/hackertyper.html'" class="button"><span>Hacker typer </span></button><br>
-                <button onclick="location.href='pages/rnd_gif.html'" class="button"><span>Random Gifs </span></button><br>
-                <button onclick="location.href='pages/rnd_memes.html'" class="button"><span>Random Memes </span></button><br>
-                <button onclick="location.href='pages/rnd_word.html'" class="button"><span>Random Words </span></button><br>
-                <button onclick="location.href='pages/rnd_youtube.html'" class="button"><span>Random YouTube </span></button><br>
-                <button onclick="location.href='pages/mysterylogin.html'" class="button"><span>Mystery Login </span></button><br>
-                <button onclick="location.href='pages/rnd_omegle.html'" class="button"><span>Random Omegle </span></button><br>
-                <button onclick="location.href='pages/yesno.html'" class="button"><span>Yes or No? </span></button><br>
-                <button onclick="location.href='pages/8ball.html'" class="button"><span>Ask the Magic 8 ball </span></button><br>
-            </div>
-           <div id="footer"><p><span style="float:left; padding-left: 30px;"><a href="other/whoarewe.html">Who are we?</a></span><span style="float:right; padding-right: 30px;"><a onclick="ShowGuestBook()">Guestbook</a></span></p></div>
-         </div>
-     </body>
+        </div>
+        <div id="body">
+            <button onclick="location.href='pages/textfaces.html'" class="button"><span>Text faces </span></button><br>
+            <button onclick="location.href='pages/hackertyper.html'" class="button"><span>Hacker typer </span></button><br>
+            <button onclick="location.href='pages/rnd_gif.html'" class="button"><span>Random Gifs </span></button><br>
+            <button onclick="location.href='pages/rnd_memes.html'" class="button"><span>Random Memes </span></button><br>
+            <button onclick="location.href='pages/rnd_word.html'" class="button"><span>Random Words </span></button><br>
+            <button onclick="location.href='pages/rnd_youtube.html'" class="button"><span>Random YouTube </span></button><br>
+            <button onclick="location.href='pages/mysterylogin.html'" class="button"><span>Mystery Login </span></button><br>
+            <button onclick="location.href='pages/rnd_omegle.html'" class="button"><span>Random Omegle </span></button><br>
+            <button onclick="location.href='pages/yesno.html'" class="button"><span>Yes or No? </span></button><br>
+            <button onclick="location.href='pages/8ball.html'" class="button"><span>Ask the Magic 8 ball </span></button><br>
+            <button onclick="YT()" class="button"><span>Memes compilation <i class="fas fa-external-link-alt"></i> </span></button><br>
+        </div>
+        <div id="footer">
+            <p><span style="float:left; padding-left: 30px;"><a href="other/whoarewe.html">Who are we?</a></span><span style="float:right; padding-right: 30px;"><a onclick="ShowGuestBook()">Guestbook</a></span></p>
+        </div>
+    </div>
+</body>
+
 </html>
